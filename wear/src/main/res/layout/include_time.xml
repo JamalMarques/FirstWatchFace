@@ -4,22 +4,27 @@
     android:layout_height="wrap_content"
     android:gravity="center">
 
-    <TextView
-        android:id="@+id/watch_time"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="15:30"
-        android:typeface="monospace"
-        android:textSize="50sp" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/watch_battery"
-        android:textSize="13sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/watch_time"
-        android:layout_below="@+id/watch_time"
-        android:text="85%" />
+        <TextView
+            android:id="@+id/watch_time_hours"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:typeface="monospace"
+            android:textSize="50sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:id="@+id/watch_time_minutes"
+            android:textSize="30dp" />
+    </LinearLayout>
+
 </LinearLayout>
