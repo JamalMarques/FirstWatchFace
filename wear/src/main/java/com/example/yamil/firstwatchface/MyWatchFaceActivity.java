@@ -11,12 +11,13 @@ import android.os.Bundle;
 import android.service.wallpaper.WallpaperService;
 import android.support.wearable.view.WatchViewStub;
 import android.support.wearable.watchface.CanvasWatchFaceService;
+import android.support.wearable.watchface.WatchFaceStyle;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class MyWatchFaceActivity extends Activity {
+public class MyWatchFaceActivity extends Activity{
 
     //private static final String baseAssetsAccess = "fonts/Roboto/";
     private static final String typeface = "fonts/Roboto/Roboto-Medium.ttf";
@@ -69,7 +70,11 @@ public class MyWatchFaceActivity extends Activity {
             }
         });
 
+        //WatchFaceStyle.Builder.forActivity(this).setAmbientPeekMode(WatchFaceStyle.PEEK_MODE_SHORT);
+        WatchFaceStyle.Builder.forActivity(this).setCardPeekMode(WatchFaceStyle.PEEK_MODE_SHORT);
+
     }
+
 
     private void setTypeface(TextView textView){
         Typeface typefaceAux = Typeface.createFromAsset(getAssets(),typeface);
