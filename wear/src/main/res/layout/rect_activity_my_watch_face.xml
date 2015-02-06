@@ -3,12 +3,53 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:orientation="vertical"
     tools:context=".MyWatchFaceActivity" tools:deviceIds="wear_square"
-    android:gravity="center">
+    android:gravity="center"
+    android:clickable="false"
+    android:background="@drawable/watch_background">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/background_title"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/linearLayout"
+        android:layout_above="@+id/include"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rightsourceLogo"
+            android:src="@drawable/humana_logo" />
+    </LinearLayout>
 
     <include layout="@layout/include_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/include"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:id="@+id/watch_battery"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
 
 </LinearLayout>

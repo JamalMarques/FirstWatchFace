@@ -49,7 +49,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="12dp"
-        android:background="@drawable/white_circle">
+        android:background="@drawable/white_circle2"
+        android:id="@+id/linearLayout2">
 
         <TextView
             android:id="@+id/watch_battery"
@@ -60,5 +61,14 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/faces_happy"
+        android:layout_below="@+id/include"
+        android:layout_toEndOf="@+id/linearLayout2"
+        android:layout_marginLeft="10dp" />
 
 </RelativeLayout>
