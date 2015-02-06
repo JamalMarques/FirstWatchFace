@@ -19,7 +19,6 @@ import java.util.Calendar;
 
 public class MyWatchFaceActivity extends Activity{
 
-    //private static final String baseAssetsAccess = "fonts/Roboto/";
     private static final String typeface = "fonts/Roboto/Roboto-Medium.ttf";
 
     private static final IntentFilter INTENT_FILTER;  //Intent that matches with some of your Actions will be detected by broadcast
@@ -70,7 +69,6 @@ public class MyWatchFaceActivity extends Activity{
             }
         });
 
-        //WatchFaceStyle.Builder.forActivity(this).setAmbientPeekMode(WatchFaceStyle.PEEK_MODE_SHORT);
         WatchFaceStyle.Builder.forActivity(this).setCardPeekMode(WatchFaceStyle.PEEK_MODE_SHORT);
 
     }

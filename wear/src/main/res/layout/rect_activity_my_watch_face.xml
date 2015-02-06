@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:orientation="vertical"
-    tools:context=".MyWatchFaceActivity" tools:deviceIds="wear_square"
-    android:gravity="center"
+    android:layout_height="match_parent" tools:context=".MyWatchFaceActivity"
+    tools:deviceIds="wear_round"
     android:clickable="false"
-    android:background="@drawable/watch_background">
+    android:background="@drawable/watch_background"
+    android:orientation="vertical"
+    android:gravity="center">
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:background="@drawable/background_title"
-        android:gravity="center"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:id="@+id/linearLayout"
-        android:layout_above="@+id/include"
-        android:layout_centerHorizontal="true">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rightsourceLogo"
-            android:src="@drawable/humana_logo" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/background_title"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/linearLayout"
+            android:layout_above="@+id/include"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rightsourceLogo"
+                android:src="@drawable/humana_logo" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <include layout="@layout/include_time"
@@ -34,22 +44,65 @@
         android:layout_centerHorizontal="true" />
 
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="6dp">
+        android:layout_height="match_parent"
+        android:gravity="center">
 
-        <TextView
-            android:id="@+id/watch_battery"
-            android:textSize="13sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="100%"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/include"
+            android:layout_toStartOf="@+id/linearLayout2"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/white_circle"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:text="R"
+                android:id="@+id/textView2"
+                android:background="@drawable/white_circle"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:id="@+id/textView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/white_circle2"
+            android:id="@+id/linearLayout2">
+
+            <TextView
+                android:id="@+id/watch_battery"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100%"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/faces_happy"
+            android:layout_below="@+id/include"
+            android:layout_toEndOf="@+id/linearLayout2"
+            android:layout_marginLeft="10dp" />
+
     </LinearLayout>
 
 </LinearLayout>
