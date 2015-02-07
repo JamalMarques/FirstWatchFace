@@ -59,13 +59,22 @@
             android:background="@drawable/white_circle"
             android:gravity="center">
 
-            <TextView
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
-                android:text="R"
-                android:id="@+id/textView2"
-                android:background="@drawable/white_circle"
-                android:gravity="center" />
+                android:background="@drawable/white_circle_shape_2"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R"
+                    android:id="@+id/textView2"
+                    android:gravity="top|center"
+                    android:textColor="@color/pure_white"
+                    android:textSize="10dp" />
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
